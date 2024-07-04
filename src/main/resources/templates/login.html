@@ -3,7 +3,16 @@
     <head>
         <title>Login</title>
         <script type="text/javascript">
-            alert("Hello!");
+            let name = 'Deividas Strole'
+            let height = 6.3
+            console.log("Hello!" + name + "Height: " + height);
+            console.log(`Hello, hello, hello! My name is ${name} typeof 6.3: ${typeof height}`)
+            var car
+            console.log("Kukukuk" + car)
+
+            var submitBtn = document.querySelector("#submitBtn")
+            console.log(`submitBtn is: ${submitBtn}`)
+
         </script>
 
     </head>
@@ -15,7 +24,21 @@
         <div>
             Password: <input type="password" th:field="${user.password}"/>
         </div>
+        <div>
+            <button type="button" id="submitBtn">Submit</button>
+        </div>
+        <script>
+            var submitBtn = document.querySelector("#submitBtn")
+            console.log(`submitBtn is: `)
+            console.log(submitBtn)
 
+            submitBtn.addEventListener('click', submitBtnClick);
+
+            function submitBtnClick() {
+                alert(`Hey! I've been clicked!`)
+            }
+
+        </script>
     </body>
 
 </html>
