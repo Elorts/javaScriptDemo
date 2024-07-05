@@ -34,6 +34,14 @@
 
             submitBtn.addEventListener('click', submitBtnClick);
 
+            submitBtn.addEventListener('mouseover', function() {
+                alert("Hey hey hey! ouse-overed!!!")
+            })
+
+            var usernameTextbox = document.querySelector("#username")
+            usernameTextbox.addEventListener('focus', () => console.log("The Username TextBox now has focus!")
+            )
+
             function submitBtnClick() {
                 alert(`Hey! I've been clicked!`)
             }
