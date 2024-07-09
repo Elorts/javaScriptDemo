@@ -21,6 +21,14 @@
             console.log("submitBtn is:");
             console.log(submitBtn);
             submitBtn.addEventListener('click', submitBtnClick);
+
+            submitBtn.addEventListener("mouseover", function() {
+                alert("Mouseover!!!");
+            })
+
+            function submitBtnClick() {
+                alert("Clicked!!!!!!!!!!!");
+            }
         </script>
     </body>
 
