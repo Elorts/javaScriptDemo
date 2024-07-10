@@ -2,8 +2,6 @@
 <html xmlns:th="http://thymeleaf.org">
     <head>
         <title>Login</title>
-
-
     </head>
     <body>
         <h1>Login Below</h1>
@@ -16,20 +14,7 @@
         <div>
             <button type="button" id="submitBtn">Submit</button>
         </div>
-        <script type="text/javascript">
-            var submitBtn = document.querySelector("#submitBtn")
-            console.log("submitBtn is:");
-            console.log(submitBtn);
-            submitBtn.addEventListener('click', submitBtnClick);
-
-            submitBtn.addEventListener("mouseover", function() {
-                alert("Mouseovered!!!");
-            })
-
-            function submitBtnClick() {
-                alert("Clicked!!!!!!!!!!!");
-            }
-        </script>
+        <script type="text/javascript" src="/js/login.js"></script>
     </body>
 
 </html>
