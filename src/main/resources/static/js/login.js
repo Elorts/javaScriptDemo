@@ -1,5 +1,4 @@
 var submitBtn = document.querySelector("#submitBtn")
-var username = document.querySelector("#username")
 var users = []
 
 submitBtn.addEventListener('click', () => {
@@ -21,8 +20,12 @@ submitBtn.addEventListener('click', () => {
 
 username.addEventListener("blur", () => {
    // console.log("We have a blur event");
-   fetch("http://localhost:8080/users/exists")
-    .then((response) => {
-        console.log(response)
+   var username = document.querySelector("#username")
+   var password = document.querySelector("#password")
+   fetch(`http://localhost:8080/users/exists?username=${username.value}&password=${password.value}`)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data)
     })
+
 })
