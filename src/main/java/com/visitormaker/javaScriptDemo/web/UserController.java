@@ -2,6 +2,7 @@ package com.visitormaker.javaScriptDemo.web;
 
 import com.visitormaker.javaScriptDemo.domain.User;
 import com.visitormaker.javaScriptDemo.repository.UserRepository;
+import com.visitormaker.javaScriptDemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,6 +17,9 @@ public class UserController {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    private UserService userService;
 
 //    @GetMapping("/exists")
 //    @ResponseBody
@@ -64,6 +68,12 @@ public class UserController {
 
         model.put("user", user);
         return "register";
+    }
+
+    @PostMapping("/register")
+    public String postRegister(User user) {
+        userService.save(user);
+        return "redirect:/login";
     }
 
 
