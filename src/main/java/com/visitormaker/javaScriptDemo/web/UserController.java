@@ -34,7 +34,6 @@ public class UserController {
         System.out.println(userListFromDb);
 
         //String loginResult = (userListFromDb.contains(user)) ? "Login info validated" : "Please try again!";
-
         //System.out.println(loginResult);
 
         for (User u : userListFromDb) {
