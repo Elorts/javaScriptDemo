@@ -2,7 +2,7 @@ var usernameTextbox = document.querySelector("#username")
 
 usernameTextbox.addEventListener("blur", () => {
     var user = {
-        "username": usernameTextbox.value,
+        "username": usernameTextbox.value
     }
 
     fetch("/users/exists", {
