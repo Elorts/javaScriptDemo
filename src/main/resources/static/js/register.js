@@ -18,8 +18,22 @@ usernameTextbox.addEventListener("blur", () => {
            console.log("Oops, this username already exists")
            usernameTextbox.focus()
            usernameTextbox.select()
+
+           showErrorAnimation( () =>  {
+                // animation is completed at this point
+
+           })
+
+
+
         } else {
             // do nothing...
         }
     })
 })
+
+function showErrorAnimation(callback) {
+    // perform the error animation code
+    console.log("We're in the showErrorAnimation function")
+    callback()
+}
