@@ -21,13 +21,12 @@ usernameTextbox.addEventListener("blur", () => {
 
            showErrorAnimation( () =>  {
                 // animation is completed at this point
-
+                console.log("We're now in the callback function")
+                usernameTextbox.style.backgroundColor = `rgb(255, 255, 255)`
            })
 
 
 
-        } else {
-            // do nothing...
         }
     })
 })
@@ -35,5 +34,15 @@ usernameTextbox.addEventListener("blur", () => {
 function showErrorAnimation(callback) {
     // perform the error animation code
     console.log("We're in the showErrorAnimation function")
-    callback()
+    var i = 0
+
+    var animationInterval = setInterval(() => {
+        i++
+        usernameTextbox.style.backgroundColor = `rgb(${i}, 0, 0)`
+        if (i >== 255) {
+            clearInterval(animationInterval);
+            console.log("Done executing animation code")
+            callback()
+        }
+    }, 1)
 }
