@@ -15,7 +15,7 @@ usernameTextbox.addEventListener("blur", () => {
     .then((rE) => rE.json())
     .then((dataToPostExists) => {
         if (dataToPostExists === true) {
-            //alert("Oops, this username already exists")
+           console.log("Oops, this username already exists")
            usernameTextbox.focus()
            usernameTextbox.select()
         } else {

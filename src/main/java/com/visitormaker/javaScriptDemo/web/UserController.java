@@ -32,22 +32,26 @@ public class UserController {
     @PostMapping("/exists")
     @ResponseBody
     public Boolean postExists(@RequestBody User user) {
-        List<User> userListFromDb = new ArrayList<>();
 
-        userListFromDb = userRepository.findAll();
-        System.out.println(userListFromDb);
+        user = userService.findByUsername(user.getUsername());
+        return (user != null);
 
-        //String loginResult = (userListFromDb.contains(user)) ? "Login info validated" : "Please try again!";
-        //System.out.println(loginResult);
+        // my old code *********************************************
 
-        for (User u : userListFromDb) {
-            if (u.getUsername().equals(user.getUsername()))
-                System.out.println("Success!");
-        }
+//        List<User> userListFromDb = new ArrayList<>();
+//
+//        userListFromDb = userRepository.findAll();
+//        System.out.println(userListFromDb);
+//
+//       for (User u : userListFromDb) {
+//            if (u.getUsername().equals(user.getUsername()))
+//                System.out.println("Success!");
+//        }
+//
+//        System.out.println("Username = " + user.getUsername());
+//        System.out.println("Password = " + user.getPassword());
 
-        System.out.println("Username = " + user.getUsername());
-        System.out.println("Password = " + user.getPassword());
-        return true;
+        //return true;
     }
 
     @GetMapping("/validateUsername")
