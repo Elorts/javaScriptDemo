@@ -2,6 +2,7 @@
 <html xmlns:th="http://tymeleaf.org">
     <head>
         <title>Registration</title>
+        <script src="https://kit.fontawesome.com/1402d44cdd.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <h2>Registration Page</h2>
@@ -12,11 +13,11 @@
             </div>
             <div>
                 <label>Password</label>
-                <input type="password" th:field="${user.password}"/>
+                <input type="password" th:field="${user.password}"/> <i id="passwordEyeIcon" class="fa-regular fa-face-grin-wide"></i>
             </div>
             <div>
                 <label>Confirm Password</label>
-                <input type="password" id="confirmPassword"/>
+                <input type="password" id="confirmPassword"/> <i id="confirmPasswordEyeIcon" class="fa-regular fa-face-grin-wide"></i>
             </div>
             <button>Create Account</button>
         </form>
