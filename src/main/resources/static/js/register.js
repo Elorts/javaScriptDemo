@@ -12,6 +12,15 @@ eyeIcons.forEach( (eyeIcon) => {
             }
         } else {
             eyeIcon.classList.replace("fa-face-smile-beam", "fa-face-grin-wide")
+            if (eyeIcon.getAttribute("id") === "passwordEyeIcon") {
+                      document.querySelector("#password").type = "password"
+                  } else {
+                      document.querySelector("#confirmPassword").type = "password"
+                  }
+
+
+
+
             console.log(eyeIcon.getAttribute("id"))
         }
     })
