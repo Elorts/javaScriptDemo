@@ -47,36 +47,36 @@ usernameTextbox.addEventListener("blur", () => {
         "username": usernameTextbox.value
     }
 
-    fetch("/users/exists", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
-    })
-    .then((rE) => rE.json())
-    .then((dataToPostExists) => {
-        if (dataToPostExists === true) {
-           console.log("Oops, this username already exists")
-           usernameTextbox.focus()
-           usernameTextbox.select()
-           showErrorAnimation().then((message) => {
-                // animation is completed at this point
-                console.log("We're now in the callback function")
-                console.log(message);
-                usernameTextbox.style.backgroundColor = `rgb(255, 255, 255)`
-           })
-        }
-
-    })
-
-
-
-
-
-
-
+    //checkIfUserExists(user)
+    anotherFunc(user)
 })
+
+async function checkIfUserExists(user) {
+    let rE = await fetch("/users/exists", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+        let userExists = await rE.json()
+            if (userExists === true) {
+               console.log("Oops, this username already exists")
+               usernameTextbox.focus()
+               usernameTextbox.select()
+               showErrorAnimation().then((message) => {
+                    // animation is completed at this point
+                    console.log("We're now in the callback function")
+                    console.log(message);
+                    usernameTextbox.style.backgroundColor = `rgb(255, 255, 255)`
+               })
+            }
+}
+
+async function anotherFunc(user) {
+    let something = await checkIfUserExists(user)
+    console.log("Here we are after the fetch has completed")
+}
 
 
 // ***************** callback example
