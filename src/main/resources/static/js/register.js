@@ -19,8 +19,6 @@ eyeIcons.forEach( (eyeIcon) => {
                   }
 
 
-
-
             console.log(eyeIcon.getAttribute("id"))
         }
     })
