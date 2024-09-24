@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends JpaRepository <User, String> {
     // this naming formula automaticaly crerates SELECT * FROM users WHERE username = :username  (findByUsername)
     User findByUsername(String username);
+
 }

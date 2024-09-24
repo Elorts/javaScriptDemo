@@ -96,7 +96,6 @@ async function anotherFunc(user) {
 //    }, 1)
 //}
 
-
 function showErrorAnimation() {
     return new Promise((resolve, reject) => {
 
