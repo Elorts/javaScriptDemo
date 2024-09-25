@@ -53,7 +53,6 @@ public class UserController {
 
         //return true;
     }
-
     
     @GetMapping("/validateUsername")
     @ResponseBody
