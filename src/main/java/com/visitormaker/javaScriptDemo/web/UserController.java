@@ -36,6 +36,7 @@ public class UserController {
         user = userService.findByUsername(user.getUsername());
         return (user != null);
 
+        
         // my old code *********************************************
 
 //        List<User> userListFromDb = new ArrayList<>();
