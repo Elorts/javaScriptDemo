@@ -36,7 +36,7 @@ public class UserController {
         user = userService.findByUsername(user.getUsername());
         return (user != null);
 
-        
+
         // my old code *********************************************
 
 //        List<User> userListFromDb = new ArrayList<>();
@@ -80,6 +80,5 @@ public class UserController {
         userService.save(user);
         return "redirect:/login";
     }
-
 
 }
