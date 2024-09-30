@@ -20,7 +20,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    
+
 //    @GetMapping("/exists")
 //    @ResponseBody
 //    public Boolean getExists(String username, String password) {
@@ -35,7 +35,6 @@ public class UserController {
 
         user = userService.findByUsername(user.getUsername());
         return (user != null);
-
 
         // my old code *********************************************
 
