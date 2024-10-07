@@ -20,7 +20,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
 //    @GetMapping("/exists")
 //    @ResponseBody
 //    public Boolean getExists(String username, String password) {
