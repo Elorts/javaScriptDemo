@@ -28,7 +28,6 @@ public class UserController {
 //        return true;
 //    }
 
-
     @PostMapping("/exists")
     @ResponseBody
     public Boolean postExists(@RequestBody User user) {
