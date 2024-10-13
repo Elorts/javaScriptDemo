@@ -36,7 +36,6 @@ public class UserController {
         return (user != null);
 
         // my old code *********************************************
-
 //        List<User> userListFromDb = new ArrayList<>();
 //
 //        userListFromDb = userRepository.findAll();
