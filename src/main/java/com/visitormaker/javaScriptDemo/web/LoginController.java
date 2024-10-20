@@ -12,6 +12,7 @@ import java.util.List;
 
 @Controller
 public class LoginController {
+
     @Autowired
     UserRepository userRepository;
 
@@ -21,7 +22,6 @@ public class LoginController {
         model.put("user", user);
         return "login";
     }
-
 
 //    @GetMapping("/users")
 //    public List listUsers() {
