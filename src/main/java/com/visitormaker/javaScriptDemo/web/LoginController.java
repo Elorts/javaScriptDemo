@@ -22,7 +22,6 @@ public class LoginController {
         model.put("user", user);
         return "login";
     }
-
         
 //    @GetMapping("/users")
 //    public List listUsers() {
