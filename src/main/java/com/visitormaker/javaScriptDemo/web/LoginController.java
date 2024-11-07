@@ -13,8 +13,6 @@ import java.util.List;
 @Controller
 public class LoginController {
 
-
-    
     @Autowired
     UserRepository userRepository;
 
